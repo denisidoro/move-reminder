@@ -1,0 +1,48 @@
+> Mathematics/Linear algebra
+Vectors
+Basis
+Orthogonality
+Transformations
+MAtrices
+Decomposition
+Eingenvalues
+Eigenvectors
+Invertibility
+
+> Mathematics/Statistics
+Distributions
+  Discrete
+    Bernoulli
+    Bionmial
+    Poisson
+  Continuous
+    Beta
+    Uniform
+    Normal
+      Gaussian
+
+> People/Gauss
+Carl Friedrich Gauss
+Germany
+
+> Physics/Thermodynamics
+Heat engine
+Kinetic theory
+Statistical mechanics
+Boltzman's constant
+Enthalpy
+Entropy
+Laws of Thermodynamics
+
+> Physics/Electromagnetism
+Magnetism
+Electricity
+Electrostatics
+  Coulomb's Law
+  Gauss's Law
+
+> Geography/Europe
+France
+Germany
+Spain
+Portugal
