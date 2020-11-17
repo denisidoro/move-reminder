@@ -1,0 +1,10 @@
+Distributions
+  Discrete
+    Bernoulli
+    Bionmial
+    Poisson
+  Continuous
+    Beta
+    Uniform
+    Normal
+      Gaussian

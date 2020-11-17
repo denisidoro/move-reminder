@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "$(dirname "$0")/aux/core.sh"
+
+generate() {
+    local id
+    local file
+    cd "${PROJ_HOME}/mindmaps"
+    for file in $(find -iname '*.txt'); do 
+        echoerr "$file"
+        id="$(echo "$file" | sed -E 's|^\./||' | sed -E 's|\.txt$||')"
+        echo
+        echo "> ${id}"
+        echo "$(cat "$file" | sed -E 's/\t/  /g')"
+    done
+}
+
+main() {
+    IFS=$'\n'
+    local -r content="$(generate)"
+    echo "$content" | tail -n +2 > "${PROJ_HOME}/public/mindmaps.txt"
+}
+
+main "$@"
