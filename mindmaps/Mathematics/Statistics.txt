@@ -1,7 +1,7 @@
 Distributions
   Discrete
     Bernoulli
-    Bionmial
+    Binomial
     Poisson
   Continuous
     Beta

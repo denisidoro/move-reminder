@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Move Reminder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A mind map ecosystem which uses indented plain text files.
 
-## Available Scripts
+![Demo](https://user-images.githubusercontent.com/3226564/99439797-6c5b8300-28f4-11eb-9f0f-46be1872bea7.png)
 
-In the project directory, you can run:
+## Why?
 
-### `yarn start`
+[This blog post](https://denisidoro.github.io/posts/mind-maps/) discusses why this tool was built and how it can be useful.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The tool is available [here](https://denisidoro.github.io/move-reminder/).
 
-### `yarn test`
+### Example
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Linear algebra
+   Vectors
+   Matrices
+      Square
+      Identity
+   Orthogonality
+```
 
-### `yarn build`
+### Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Compile all your mind maps to a text file similar to [this one](https://denisidoro.github.io/move-reminder/mindmaps.txt)
+   - you can either write it directly
+   - or you can edit files in [./mindmaps](https://github.com/denisidoro/move-reminder/tree/master/mindmaps) accordingly and run [./scripts/compile-mindmaps](https://github.com/denisidoro/move-reminder/blob/master/scripts/compile-mindmaps) to have an output at [./public](https://github.com/denisidoro/move-reminder/blob/master/public)/mindmaps.txt
+2. Upload this file somewhere — e.g. [Github Gist](https://gist.github.com/)
+2. Open the app using the `?url=` parameter
+   - e.g. [denisidoro.github.io/move-reminder/?url=https://gist.github.com/denisidoro/5b45ce137b4239ff03f7e0c406053d3a](https://denisidoro.github.io/move-reminder/?url=https://gist.github.com/denisidoro/5b45ce137b4239ff03f7e0c406053d3a)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Etymology
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In the [Pokémon series](https://en.wikipedia.org/wiki/Pok%C3%A9mon), a [Move Reminder](https://bulbapedia.bulbagarden.net/wiki/Move_Reminder) is a character who can teach a Pokémon any move it has forgotten.
 
-### `yarn eject`
+## You may also like
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [markmap](https://github.com/gera2ld/markmap/)
+- [text2mindmap](https://tobloef.com/text2mindmap/)
