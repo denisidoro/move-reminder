@@ -2,7 +2,7 @@ Vectors
 Basis
 Orthogonality
 Transformations
-MAtrices
+Matrices
 Decomposition
 Eingenvalues
 Eigenvectors

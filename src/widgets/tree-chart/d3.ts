@@ -1,3 +1,6 @@
+// This is based on
+// https://github.com/gera2ld/markmap/blob/e6b035840124702208255f4d2a561f297a922319/packages/markmap-view/src/index.ts
+
 import * as d3 from 'd3'
 import { flextree } from 'd3-flextree'
 import { Hook, getId, walkTree, arrayFrom, addClass, childSelector, noop } from 'markmap-common'
