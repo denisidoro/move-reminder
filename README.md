@@ -30,7 +30,7 @@ Linear algebra
    - or you can edit files in [./mindmaps](https://github.com/denisidoro/move-reminder/tree/master/mindmaps) accordingly and run [./scripts/compile-mindmaps](https://github.com/denisidoro/move-reminder/blob/master/scripts/compile-mindmaps) to have an output at [./public](https://github.com/denisidoro/move-reminder/blob/master/public)/mindmaps.txt
 2. Upload this file somewhere — e.g. [Github Gist](https://gist.github.com/)
 2. Open the app using the `?url=` parameter
-   - e.g. [denisidoro.github.io/move-reminder/?url=https://gist.github.com/denisidoro/5b45ce137b4239ff03f7e0c406053d3a](https://denisidoro.github.io/move-reminder/?url=https://gist.github.com/denisidoro/5b45ce137b4239ff03f7e0c406053d3a)
+   - e.g., check the full URL for [this page](https://denisidoro.github.io/move-reminder/?url=https://gist.githubusercontent.com/denisidoro/5b45ce137b4239ff03f7e0c406053d3a/raw/0ea160c15a69c8a5c50d6b23363f9933c6c58db0/maps.txt)
 
 ### Etymology
 
