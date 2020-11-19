@@ -1,7 +1,6 @@
 {
   "name": "knowledge",
   "version": "0.1.0",
-  "homepage": "http://denisidoro.github.io/move-reminder",
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^3.35.0",

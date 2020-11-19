@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import TreeChart from './tree-chart'
 import { isInternalCommand, queryFunctionBuilder } from '../logic/db'
-import { useMainContext } from '../context'
+import { useMainContext } from '../hooks/context'
 import { adapt } from '../logic/adapter'
 import { INode } from '../types'
 
