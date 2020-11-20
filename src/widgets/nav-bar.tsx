@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useMainContext } from '../hooks/context'
 import { HOME } from '../logic/db'
 import { useDebouncedEffect } from '../hooks/debounce'
+import { BreadcrumbsExample } from './history'
 import {
   InputGroup,
   Alignment,
@@ -23,20 +24,24 @@ const searchButton = (
 
 const Search = () => {
   const { query, setQuery } = useMainContext()
+
+  // TODO: use debounced value
+  /*
   const [state, setState] = useState(query)
 
   useDebouncedEffect(
     () => setQuery(state),
     325,
     [state])
+  */
 
   return (
     <InputGroup
       rightElement={searchButton}
       type='text'
       className='search'
-      value={state}
-      onChange={(v) => setState(v.target.value)}
+      value={query}
+      onChange={(v) => setQuery(v.target.value)}
     />
   )
 }
@@ -58,7 +63,7 @@ const helpClick = () => {
 }
 
 export const NavBar = () => {
-  const { query, setQuery } = useMainContext()
+  const { query, setQuery, setQueryBack, history } = useMainContext()
   const disabled = query == HOME
 
   return (
@@ -70,12 +75,15 @@ export const NavBar = () => {
         <NavbarDivider />
         <>
           <Button icon='home' className={Classes.MINIMAL} onClick={() => setQuery(HOME)} />
+          <Button icon='undo' className={Classes.MINIMAL} onClick={() => setQueryBack()} />
           <NavbarDivider />
           <Button icon='globe' className={Classes.MINIMAL} disabled={disabled} onClick={searchWikipediaClick(query)} />
           <Button icon='book' className={Classes.MINIMAL} disabled={disabled} onClick={searchFarlexClick(query)} />
           <Button icon='camera' className={Classes.MINIMAL} disabled={disabled} onClick={searchGoogleImagesClick(query)} />
           <NavbarDivider />
           <Button icon='help' className={Classes.MINIMAL} onClick={helpClick} />
+          <NavbarDivider />
+          <BreadcrumbsExample />
         </>
       </NavbarGroup>
     </Navbar>

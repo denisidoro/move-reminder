@@ -3,13 +3,14 @@ import 'normalize.css'
 import '@blueprintjs/core/lib/css/blueprint.css'
 import '@blueprintjs/icons/lib/css/blueprint-icons.css'
 
-import React, { useEffect, useState } from 'react'
-import { MainContext } from './hooks/context'
-import { HOME } from './logic/db'
+import React, { useCallback, useEffect, useState } from 'react'
+import { MainContext, useValue } from './hooks/context'
 import { stringToMap } from './logic/bulk-parser'
 import { MainView } from './widgets/main-view'
 import { NavBar } from './widgets/nav-bar'
 import { getParams, DEFAULT_MAPS_URL, errorMaps } from './logic/url'
+
+/*
 import { IResizeEntry, ResizeSensor } from "@blueprintjs/core";
 
 const onResize = (setIsVertical) => (entries: IResizeEntry[]) => {
@@ -22,6 +23,7 @@ const onResize = (setIsVertical) => (entries: IResizeEntry[]) => {
 }
 
 const isInitiallyVertical = window.innerWidth < window.innerHeight
+*/
 
 const downloadMindmaps = (setMaps) => {
   const params = getParams(window.location.search)
@@ -39,20 +41,19 @@ const downloadMindmaps = (setMaps) => {
 }
 
 function App() {
-  const [query, setQuery] = useState(HOME)
-  const [maps, setMaps] = useState(null)
-  const [isVertical, setIsVertical] = useState(isInitiallyVertical)
+  const value = useValue()
 
-  useEffect(() => downloadMindmaps(setMaps), [])
+  // TODO: use isVertical
+  // const [isVertical, setIsVertical] = useState(isInitiallyVertical) 
+
+  useEffect(() => downloadMindmaps(value.setMaps), [])
 
   return (
-    <MainContext.Provider value={{ query, setQuery, maps, setMaps }}>
-      <ResizeSensor onResize={onResize(setIsVertical)}>
-        <div className='App full-height'>
-          <NavBar />
-          <MainView />
-        </div>
-      </ResizeSensor>
+    <MainContext.Provider value={value}>
+      <div className='App full-height'>
+        <NavBar />
+        <MainView />
+      </div>
     </MainContext.Provider >
   )
 }
