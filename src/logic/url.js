@@ -9,9 +9,10 @@ export function getParams(location) {
 
 export const DEFAULT_MAPS_URL = 'mindmaps.txt'
 
-export function errorMaps(url) {
-  return {
-    Error: `Impossible to get
- ${url}`
-  }
+export function errorMaps(url, error) {
+  const escapedUrl = url.replaceAll('/', '\\/')
+  return `> Unable to get/${escapedUrl}
+   Failed to download mindmap
+> Exception/${error}
+   Javascript exception`
 }

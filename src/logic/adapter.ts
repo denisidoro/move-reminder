@@ -8,7 +8,7 @@ export function styled(node: INode, depth: number = 0, colorMain?: number): INod
   const l = depth > 0 ? getColor(colorMain, depth - 1) : FALLBACK_COLOR
   const newV = v == '.' ? '' : v
   const newNode = { ...node, c: null, v: newV, d: depth, l } as INode
-  if (newV == LINKS) {
+  if (newV == LINKS || depth > 1) {
     newNode.p = { ...newNode.p, f: true }
   }
   if (c && c.length > 0) {

@@ -8,7 +8,9 @@ export const HOME = ''
 export const NO_MATCHES = 'no matches'
 
 function pathStrToVec(path) {
-  return path.split('/')
+  return path.replaceAll('\\/', '˞')
+    .split('/')
+    .map(x => x.replaceAll('˞', '/'))
 }
 
 function external(path, match) {

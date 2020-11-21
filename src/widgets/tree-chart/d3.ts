@@ -83,7 +83,8 @@ export class Markmap {
   constructor(svg: string | SVGElement | ID3SVGElement, opts?: IMarkmapOptions) {
     [
       'handleZoom',
-      'handleClick'
+      'handleClick',
+      'handleClickCircle'
     ].forEach(key => {
       this[key] = this[key].bind(this)
     })
@@ -148,8 +149,17 @@ ${extraStyle}
   }
 
   handleClick(e, d: IMarkmapFlexTreeItem): void {
+    const now = Date.now()
+    if (this.state.lastClickMs != null && now - this.state.lastClickMs <= 500) {
+      return
+    }
     const { data } = d
     this.options.onClick(data)
+  }
+
+  handleClickCircle(e, d: IMarkmapFlexTreeItem): void {
+    this.state.lastClickMs = Date.now()
+    const { data } = d
     data.p = {
       ...data.p,
       f: !data.p?.f
@@ -305,6 +315,7 @@ ${this.getStyleContent()}
             .attr('cx', d => d.ySizeInner)
             .attr('cy', d => d.xSize)
             .attr('r', 0)
+            .on('click', this.handleClickCircle)
         },
         update => update,
         exit => exit.remove()

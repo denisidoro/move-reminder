@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useCallback } from 'react'
 import TreeChart from './tree-chart'
 import { isInternalCommand, queryFunctionBuilder } from '../logic/db'
-import { useMainContext } from '../context'
+import { useMainContext } from '../hooks/context'
 import { adapt } from '../logic/adapter'
 import { INode } from '../types'
 
@@ -16,16 +16,18 @@ const Mindmap = () => {
     () => queryFunction == null ? null : adapt(queryFunction(query), query),
     [queryFunction, query])
 
-  return data == null
-    ? null
-    : <TreeChart
-      data={data}
-      onClick={({ v }: INode) => {
-        if (isInternalCommand(v)) {
-          return
-        }
-        setQuery(v)
-      }} />
+  const onClick = useCallback(
+    ({ v }: INode) => {
+      if (isInternalCommand(v)) {
+        return
+      }
+      setQuery(`${v}`)
+    },
+    [setQuery])
+
+  return <TreeChart
+    data={data}
+    onClick={onClick} />
 }
 
 export default Mindmap
