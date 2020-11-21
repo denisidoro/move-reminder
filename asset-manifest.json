@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/move-reminder/static/css/main.c6b8b970.chunk.css",
-    "main.js": "/move-reminder/static/js/main.d3537ae8.chunk.js",
-    "main.js.map": "/move-reminder/static/js/main.d3537ae8.chunk.js.map",
-    "runtime-main.js": "/move-reminder/static/js/runtime-main.511ef4b9.js",
-    "runtime-main.js.map": "/move-reminder/static/js/runtime-main.511ef4b9.js.map",
+    "main.css": "/move-reminder/static/css/main.be65abbe.chunk.css",
+    "main.js": "/move-reminder/static/js/main.278b04c5.chunk.js",
+    "main.js.map": "/move-reminder/static/js/main.278b04c5.chunk.js.map",
+    "runtime-main.js": "/move-reminder/static/js/runtime-main.ce044f95.js",
+    "runtime-main.js.map": "/move-reminder/static/js/runtime-main.ce044f95.js.map",
     "static/css/2.28b97c03.chunk.css": "/move-reminder/static/css/2.28b97c03.chunk.css",
-    "static/js/2.875aeec9.chunk.js": "/move-reminder/static/js/2.875aeec9.chunk.js",
-    "static/js/2.875aeec9.chunk.js.map": "/move-reminder/static/js/2.875aeec9.chunk.js.map",
-    "static/js/3.3f250215.chunk.js": "/move-reminder/static/js/3.3f250215.chunk.js",
-    "static/js/3.3f250215.chunk.js.map": "/move-reminder/static/js/3.3f250215.chunk.js.map",
+    "static/js/2.4d553231.chunk.js": "/move-reminder/static/js/2.4d553231.chunk.js",
+    "static/js/2.4d553231.chunk.js.map": "/move-reminder/static/js/2.4d553231.chunk.js.map",
+    "static/js/3.5f24367d.chunk.js": "/move-reminder/static/js/3.5f24367d.chunk.js",
+    "static/js/3.5f24367d.chunk.js.map": "/move-reminder/static/js/3.5f24367d.chunk.js.map",
     "index.html": "/move-reminder/index.html",
     "static/css/2.28b97c03.chunk.css.map": "/move-reminder/static/css/2.28b97c03.chunk.css.map",
-    "static/css/main.c6b8b970.chunk.css.map": "/move-reminder/static/css/main.c6b8b970.chunk.css.map",
-    "static/js/2.875aeec9.chunk.js.LICENSE.txt": "/move-reminder/static/js/2.875aeec9.chunk.js.LICENSE.txt",
+    "static/css/main.be65abbe.chunk.css.map": "/move-reminder/static/css/main.be65abbe.chunk.css.map",
+    "static/js/2.4d553231.chunk.js.LICENSE.txt": "/move-reminder/static/js/2.4d553231.chunk.js.LICENSE.txt",
     "static/media/blueprint-icons.css": "/move-reminder/static/media/icons-20.cde033c5.eot"
   },
   "entrypoints": [
-    "static/js/runtime-main.511ef4b9.js",
+    "static/js/runtime-main.ce044f95.js",
     "static/css/2.28b97c03.chunk.css",
-    "static/js/2.875aeec9.chunk.js",
-    "static/css/main.c6b8b970.chunk.css",
-    "static/js/main.d3537ae8.chunk.js"
+    "static/js/2.4d553231.chunk.js",
+    "static/css/main.be65abbe.chunk.css",
+    "static/js/main.278b04c5.chunk.js"
   ]
 }

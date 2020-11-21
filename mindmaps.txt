@@ -3,7 +3,7 @@ Vectors
 Basis
 Orthogonality
 Transformations
-MAtrices
+Matrices
 Decomposition
 Eingenvalues
 Eigenvectors
@@ -13,7 +13,7 @@ Invertibility
 Distributions
   Discrete
     Bernoulli
-    Bionmial
+    Binomial
     Poisson
   Continuous
     Beta
