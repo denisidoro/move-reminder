@@ -25,6 +25,7 @@ export interface IMarkmapState {
   maxX?: number
   minY?: number
   maxY?: number
+  lastClickMs?: number
 }
 
 export interface IMarkmapFlexTreeItem {

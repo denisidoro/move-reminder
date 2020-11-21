@@ -38,8 +38,9 @@ const Search = () => {
   return (
     <InputGroup
       rightElement={searchButton}
-      type='text'
       className='search'
+      type='text'
+      width='20em'
       value={query}
       onChange={(v) => setQuery(v.target.value)}
     />
@@ -63,8 +64,10 @@ const helpClick = () => {
 }
 
 export const NavBar = () => {
-  const { query, setQuery, setQueryBack, history } = useMainContext()
-  const disabled = query == HOME
+  const { query, setQuery, setQueryBack, setQueryForward, history, historyPos } = useMainContext()
+  const searchDisabled = query == HOME
+  const backDisabled = history.length + historyPos <= 1
+  const forwardDisabled = history.length <= 1 || historyPos >= 0
 
   return (
     <Navbar fixedToTop className='navbar' style={{ background: 'black' }}>
@@ -75,15 +78,18 @@ export const NavBar = () => {
         <NavbarDivider />
         <>
           <Button icon='home' className={Classes.MINIMAL} onClick={() => setQuery(HOME)} />
-          <Button icon='undo' className={Classes.MINIMAL} onClick={() => setQueryBack()} />
+          <Button icon='undo' className={Classes.MINIMAL} disabled={backDisabled} onClick={() => setQueryBack()} />
+          <Button icon='redo' className={Classes.MINIMAL} disabled={forwardDisabled} onClick={() => setQueryForward()} />
           <NavbarDivider />
-          <Button icon='globe' className={Classes.MINIMAL} disabled={disabled} onClick={searchWikipediaClick(query)} />
-          <Button icon='book' className={Classes.MINIMAL} disabled={disabled} onClick={searchFarlexClick(query)} />
-          <Button icon='camera' className={Classes.MINIMAL} disabled={disabled} onClick={searchGoogleImagesClick(query)} />
+          <Button icon='globe' className={Classes.MINIMAL} disabled={searchDisabled} onClick={searchWikipediaClick(query)} />
+          <Button icon='book' className={Classes.MINIMAL} disabled={searchDisabled} onClick={searchFarlexClick(query)} />
+          <Button icon='camera' className={Classes.MINIMAL} disabled={searchDisabled} onClick={searchGoogleImagesClick(query)} />
           <NavbarDivider />
           <Button icon='help' className={Classes.MINIMAL} onClick={helpClick} />
           <NavbarDivider />
-          <BreadcrumbsExample />
+          <div className='history'>
+            <BreadcrumbsExample />
+          </div>
         </>
       </NavbarGroup>
     </Navbar>

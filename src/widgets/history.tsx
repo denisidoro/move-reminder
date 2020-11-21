@@ -1,23 +1,36 @@
 import React, { createContext, useContext, useState, useCallback } from 'react'
 import { Breadcrumb, Breadcrumbs, IBreadcrumbProps, Icon } from '@blueprintjs/core'
+import { useMainContext } from '../hooks/context'
+import { HOME } from '../logic/db'
 
-const BREADCRUMBS: IBreadcrumbProps[] = [
-    { href: "/users", icon: "folder-close", text: "Users" },
-    { href: "/users/janet", icon: "folder-close", text: "Janet" },
-    { icon: "document", text: "image.jpg" },
-];
+function asItems(history, setQuery): IBreadcrumbProps[] {
+    return history.map(item => {
+        const text = item == HOME ? 'Home' : item
+        return {
+            onClick: () => { setQuery(item) },
+            text
+        }
+    })
+}
 
 const renderCurrentBreadcrumb = ({ text, ...restProps }: IBreadcrumbProps) => {
-    // customize rendering of last breadcrumb
-    return <Breadcrumb {...restProps}>{text}</Breadcrumb>;
+    return <Breadcrumb className='breadcrumb' {...restProps}>{text}</Breadcrumb>;
 };
 
 export function BreadcrumbsExample() {
+    const { history, historyPos, setQuery } = useMainContext()
+
+    if (history.length <= 1) {
+        return null
+    }
+
+    const slicedHistory = history.slice(0, history.length + historyPos)
+    const items = asItems(slicedHistory, setQuery)
+
     return (
         <Breadcrumbs
-            currentBreadcrumbRenderer={renderCurrentBreadcrumb}
-            items={BREADCRUMBS}
-            minVisibleItems={2}
+            breadcrumbRenderer={renderCurrentBreadcrumb}
+            items={items}
         />
     )
 } 

@@ -68,10 +68,18 @@ body {
 
 .search {
 	margin-right: 1em;
-	width: 60%;
+	width: 20em;
+	background: 'red';
 }
 
 .navbar {
 	width: '100%';
-	background: 'black';
+}
+
+.breadcrumb {
+	white-space: nowrap;
+}
+
+.history {
+	width: 30em;
 }
