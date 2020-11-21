@@ -8,11 +8,11 @@ A mind map ecosystem which uses indented plain text files.
 
 [This blog post](https://denisidoro.github.io/posts/mind-maps/) discusses why this tool was built and how it can be useful.
 
-### Demo
+## Demo
 
 The tool is available [here](https://denisidoro.github.io/move-reminder/).
 
-### Example
+## Example
 
 ```
 Linear algebra
@@ -23,7 +23,7 @@ Linear algebra
    Orthogonality
 ```
 
-### Usage
+## Usage
 
 1. Compile all your mind maps to a text file similar to [this one](https://denisidoro.github.io/move-reminder/mindmaps.txt)
    - you can either write it directly
@@ -32,7 +32,11 @@ Linear algebra
 2. Open the app using the `?url=` parameter
    - e.g., check the full URL for [this page](https://denisidoro.github.io/move-reminder/?url=https://gist.githubusercontent.com/denisidoro/5b45ce137b4239ff03f7e0c406053d3a/raw/0ea160c15a69c8a5c50d6b23363f9933c6c58db0/maps.txt)
 
-### Etymology
+## Expanding and contracting nodes
+
+Click on the circles, not the text.
+
+## Etymology
 
 In the [Pokémon series](https://en.wikipedia.org/wiki/Pok%C3%A9mon), a [Move Reminder](https://bulbapedia.bulbagarden.net/wiki/Move_Reminder) is a character who can teach a Pokémon any move it has forgotten.
 

@@ -3,11 +3,11 @@ import 'normalize.css'
 import '@blueprintjs/core/lib/css/blueprint.css'
 import '@blueprintjs/icons/lib/css/blueprint-icons.css'
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { MainContext, useValue } from './hooks/context'
 import { stringToMap } from './logic/bulk-parser'
 import { MainView } from './widgets/main-view'
-import { NavBar } from './widgets/nav-bar'
+import { TopBar, LeftBar } from './widgets/nav-bar'
 import { getParams, DEFAULT_MAPS_URL, errorMaps } from './logic/url'
 
 /*
@@ -51,7 +51,8 @@ function App() {
   return (
     <MainContext.Provider value={value}>
       <div className='App full-height'>
-        <NavBar />
+        <TopBar />
+        <LeftBar />
         <MainView />
       </div>
     </MainContext.Provider >

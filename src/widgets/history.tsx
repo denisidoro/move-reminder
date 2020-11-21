@@ -14,10 +14,10 @@ function asItems(history, setQuery): IBreadcrumbProps[] {
 }
 
 const renderCurrentBreadcrumb = ({ text, ...restProps }: IBreadcrumbProps) => {
-    return <Breadcrumb className='breadcrumb' {...restProps}>{text}</Breadcrumb>;
+    return <Breadcrumb className='breadcrumb' {...restProps}><small>{text}</small></Breadcrumb>;
 };
 
-export function BreadcrumbsExample() {
+export function History() {
     const { history, historyPos, setQuery } = useMainContext()
 
     if (history.length <= 1) {
@@ -29,6 +29,7 @@ export function BreadcrumbsExample() {
 
     return (
         <Breadcrumbs
+            minVisibleItems={2}
             breadcrumbRenderer={renderCurrentBreadcrumb}
             items={items}
         />

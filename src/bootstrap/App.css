@@ -68,8 +68,7 @@ body {
 
 .search {
 	margin-right: 1em;
-	width: 20em;
-	background: 'red';
+	width: '40%';
 }
 
 .navbar {
@@ -81,5 +80,10 @@ body {
 }
 
 .history {
-	width: 30em;
+	width: '40%';
+}
+
+.button-group {
+	margin-top: '2em';
+	margin-bottom: '2em';
 }
