@@ -57,6 +57,7 @@ const Search = () => {
       rightElement={searchButton}
       className={Classes.MINIMAL}
       type='text'
+      placeholder='Search...'
       value={query}
       onChange={(v) => setQuery(v.target.value)}
     />
