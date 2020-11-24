@@ -20,7 +20,7 @@
     "react-iframe": "^1.8.0",
     "react-scripts": "4.0.0",
     "react-tsparticles": "^1.18.11",
-    "typescript": "^4.0.3",
+    "typescript": "4.0.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
