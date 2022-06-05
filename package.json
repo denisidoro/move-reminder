@@ -21,7 +21,7 @@
     "react-scripts": "4.0.0",
     "react-tsparticles": "^1.18.11",
     "typescript": "4.0.5",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
